@@ -1,4 +1,5 @@
 # example
+## edited to recommit to run Travis correctly
 
 [![Build
 Status](https://travis-ci.org/alisonsu/example.svg?branch=master)](https://travis-ci.org/alisonsu/example)
