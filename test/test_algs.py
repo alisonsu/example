@@ -20,15 +20,57 @@ def test_bubblesort():
     # think about: (1) does your code handle 0-element arrays without
     # failing, (2) does your code handle characters?
 
-    x = np.array([1,2,4,0,1])
-    
-    # for now, just attempt to call the bubblesort function, should
-    # actually check output
+
+    # Test empty array
+    x = []
     algs.bubblesort(x)
+    print("b",x)
+    
+    # Test single element array:
+    x = [4]
+    algs.bubblesort(x)
+    
+    # Test sorted array:
+    x = [0,1,2,3]
+    algs.bubblesort(x)
+    print("bubblesrt: ",x)
+    
+    # Test negative elements in array:
+    x = [0, 6, 3, -5, 2]
+    algs.bubblesort(x)
+    
+    # Test duplicated elements in array:
+    x = [4, 5, 4, 6, 10, 3]
+    algs.bubblesort(x)
+    print(x)
 
 def test_quicksort():
-
-    x = np.array([1,2,4,0,1])
-    # for now, just attempt to call the quicksort function, should
-    # actually check output
-    algs.quicksort(x)
+    p=0
+    
+    # Test empty array:
+    x = []
+    r = len(x)-1 
+    algs.quicksort(x,p,r)
+    
+    # Test single element array:
+    x = [4]
+    r = len(x)-1
+    algs.quicksort(x,p,r)
+    
+    # Test sorted array
+    x = [0,1,2,3]
+    r = len(x)-1
+    algs.quicksort(x,p,r)
+    
+    # Test negative elements in array
+    x = [0, 6, 3, -5, 2]
+    r = len(x)-1
+    algs.quicksort(x,p,r)
+    print(x)
+    
+    # Test duplicated elements in array:
+    x = [4, 5, 4, 6, 10, 3]
+    r = len(x)-1
+    algs.quicksort(x,p,r)
+    print(x)
+    
