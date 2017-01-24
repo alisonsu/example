@@ -15,11 +15,6 @@ def test_pointless_sort():
     assert np.array_equal(algs.pointless_sort(x), np.array([1,2,3]))
 
 def test_bubblesort():
-    # Actually test bubblesort here. It might be useful to think about
-    # some edge cases for your code, where it might fail. Some things to
-    # think about: (1) does your code handle 0-element arrays without
-    # failing, (2) does your code handle characters?
-
 
     # Test empty array
     x = []
@@ -39,6 +34,10 @@ def test_bubblesort():
     
     # Test duplicated elements in array:
     x = [4, 5, 4, 6, 10, 3]
+    algs.bubblesort(x)
+    
+    # Test characters in list
+    x = ['a', 'g', 2]
     algs.bubblesort(x)
 
 def test_quicksort():
@@ -68,4 +67,9 @@ def test_quicksort():
     x = [4, 5, 4, 6, 10, 3]
     r = len(x)-1
     algs.quicksort(x,p,r)
+    
+    # Test characters in list
+    x = ['a', 'g', 2]
+    r = len(x)-1
+    algs.quicksort(x,p,r) 
     
