@@ -9,10 +9,15 @@ def pointless_sort(x):
 
 def bubblesort(lst_bubble):
     """
-    Implements bubblesort algorithm. Go through entire list, lst_bubble, starting from the left.
-    For each element, compare to its neighbor on the right. If the element on the left is 
-    greater than the element to its right, swap them. By repeating this process over 
-    the length of the input list, the list will be sorted from smallest to greatest.
+    Implements bubblesort algorithm. Goes through entire input list, lst_bubble, 
+    one element at a time, starting from the left and moving right. Each element
+    is compared to its neighbor on the right. If the element on the left is 
+    greater than the element to its right, they are swapped. Since the highest value 
+    will always ultimately be moved to its correct position, each round the list
+    need only be iterated through (length of list - iteration), which saves computation
+    time. The end result is a list sorted from smallest to greatest.
+    
+    This function also counts the conditionals and assignments for the hw writeup.
     """
     n = len(lst_bubble)
     cond = 0
@@ -30,11 +35,15 @@ def partition(lst_part, p, r):
     """
     This is part of the quicksort algorithm. This partition function goes through
     the input list, lst_part, and sets the right-most value in the list as the pivot.
-    The list is then iterated through from the left-most value (p) to the right. The 
-    values in the list are then split by their relationship to the pivot value, and
-    the location of the split is maintained by pivot_index. This is done by swapping
-    any values less than the pivot value with the value at pivot index
-    Any values less than the value of pivot are kept on the left side of a pivot_index
+    The input list is then iterated through from the left-most value (p) to the right. The 
+    values in the list are then separated by their relationship to (greater or lesser than) the pivot value.
+    The location of the split is maintained by pivot_index. This partitioning is done by swapping
+    any values less than the pivot value with the value at pivot index, keeping the pivot index
+    as the partition, to the right of all values less than pivot. Any values greater than
+    the pivot value are left in place, to the right of pivot_index. For helpful video,
+    see: https://www.youtube.com/watch?v=COk73cpQbFQ.
+    
+    This function also counts the conditionals and assignments for the hw writeup.
     """
     cond_part = 0
     assign_part = 0
@@ -54,9 +63,12 @@ def quicksort(lst2, p, r):
     """
     This, along with the partition function, implements the quicksort algorithm.
     As long as we are not at the end of the list (r>p), this function calls partition
-    to partition the list into 2 parts, one contains values greater and one that
-    contains values lesser than the pivot value (set in partition). This function recursively
-    sorts these 2 new lists by partitioning each...until all values in the list are sorted.
+    to split the list into 2 parts, one containing values greater and one containg 
+    values lesser than the pivot value (set in partition). This function recursively
+    calls itself to sort these 2 sub-lists using partition...until all values in
+    the list are sorted.
+    
+    This function also counts the conditionals and assignments for the hw writeup.
     """
     cond_quick = 0
     assign_quick = 0
