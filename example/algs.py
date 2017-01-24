@@ -20,15 +20,18 @@ def bubblesort(lst_bubble):
     This function also counts the conditionals and assignments for the hw writeup.
     """
     n = len(lst_bubble)
-    cond = 0
-    assign = 0
-    for i in range(n):
-        for j in range(1,n-i):
-            cond +=1
-            if lst_bubble[j-1] > lst_bubble[j]:
-                lst_bubble[j],lst_bubble[j-1] = swap(lst_bubble[j],lst_bubble[j-1])
-                assign +=3
-    return (cond, assign)
+    if all(type(item)!=str for item in lst_bubble) != True:
+        return
+    else:
+        cond = 0
+        assign = 0
+        for i in range(n):
+            for j in range(1,n-i):
+                cond +=1
+                if lst_bubble[j-1] > lst_bubble[j]:
+                    lst_bubble[j],lst_bubble[j-1] = swap(lst_bubble[j],lst_bubble[j-1])
+                    assign +=3
+        return (cond, assign)
     
     
 def partition(lst_part, p, r):
@@ -70,20 +73,23 @@ def quicksort(lst2, p, r):
     
     This function also counts the conditionals and assignments for the hw writeup.
     """
-    cond_quick = 0
-    assign_quick = 0
-    assign_quick +=1
-    if (r>p):
-        pivot, c_qck, a_qck = partition(lst2,p,r)
-        cond_quick += c_qck
-        assign_quick += a_qck
-        c_qck, a_qck = quicksort(lst2, p, pivot-1)
-        cond_quick += c_qck
-        assign_quick += a_qck
-        c_qck, a_qck = quicksort(lst2, pivot+1,r)
-        cond_quick += c_qck
-        assign_quick += a_qck
-    return cond_quick, assign_quick
+    if all(type(item)!=str for item in lst2) != True:
+        return
+    else:
+        cond_quick = 0
+        assign_quick = 0
+        assign_quick +=1
+        if (r>p):
+            pivot, c_qck, a_qck = partition(lst2,p,r)
+            cond_quick += c_qck
+            assign_quick += a_qck
+            c_qck, a_qck = quicksort(lst2, p, pivot-1)
+            cond_quick += c_qck
+            assign_quick += a_qck
+            c_qck, a_qck = quicksort(lst2, pivot+1,r)
+            cond_quick += c_qck
+            assign_quick += a_qck
+        return cond_quick, assign_quick
 
 
 def swap(a,b):
