@@ -24,7 +24,6 @@ def test_bubblesort():
     # Test empty array
     x = []
     algs.bubblesort(x)
-    print("b",x)
     
     # Test single element array:
     x = [4]
@@ -33,7 +32,6 @@ def test_bubblesort():
     # Test sorted array:
     x = [0,1,2,3]
     algs.bubblesort(x)
-    print("bubblesrt: ",x)
     
     # Test negative elements in array:
     x = [0, 6, 3, -5, 2]
@@ -42,7 +40,6 @@ def test_bubblesort():
     # Test duplicated elements in array:
     x = [4, 5, 4, 6, 10, 3]
     algs.bubblesort(x)
-    print(x)
 
 def test_quicksort():
     p=0
@@ -66,11 +63,10 @@ def test_quicksort():
     x = [0, 6, 3, -5, 2]
     r = len(x)-1
     algs.quicksort(x,p,r)
-    print(x)
-    
+
     # Test duplicated elements in array:
     x = [4, 5, 4, 6, 10, 3]
     r = len(x)-1
     algs.quicksort(x,p,r)
-    print(x)
+)
     
