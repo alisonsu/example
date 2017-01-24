@@ -32,3 +32,13 @@ python -m pytest
 ```
 
 from the root directory of this project. This tests typical edge cases for both bubblesort and quicksort.
+
+## plotting
+To generate representative plots described in my submitted PDF, run
+
+
+```
+python plotting.py
+```
+
+This code plots the time complexity and number of conditionals and assignments for bubblesort and quicksort. It iterates through list sizes from 100-1000 in steps of 100. For each list size, it randomly generates 100 lists in order to calculate means and standard deviations for plotting.
