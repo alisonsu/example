@@ -68,5 +68,4 @@ def test_quicksort():
     x = [4, 5, 4, 6, 10, 3]
     r = len(x)-1
     algs.quicksort(x,p,r)
-)
     
