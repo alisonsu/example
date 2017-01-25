@@ -13,8 +13,8 @@ def bubblesort(lst_bubble):
     one element at a time, starting from the left and moving right. Each element
     is compared to its neighbor on the right. If the element on the left is 
     greater than the element to its right, they are swapped. Since the highest value 
-    will always ultimately be moved to its correct position, each round the list
-    need only be iterated through (length of list - iteration), which saves computation
+    will always ultimately be moved to its correct position, each round, the list
+    need only be iterated through (length of list - iteration), which saves computational
     time. The end result is a list sorted from smallest to greatest.
     
     This function also counts the conditionals and assignments for the hw writeup.
@@ -62,7 +62,7 @@ def partition(lst_part, p, r):
 def quicksort(lst2, p, r):
     """
     This, along with the partition function, implements the quicksort algorithm.
-    As long as we are not at the end of the list (r>p), this function calls partition
+    As long as not at the end of the list (r>p), this function calls partition
     to split the list into 2 parts, one containing values greater and one containg 
     values lesser than the pivot value (set in partition). This function recursively
     calls itself to sort these 2 sub-lists using partition...until all values in
