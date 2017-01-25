@@ -35,6 +35,10 @@ def test_bubblesort():
     # Test duplicated elements in array:
     x = [4, 5, 4, 6, 10, 3]
     algs.bubblesort(x)
+    
+    # Test floats in array:
+    x = [0.4, -3, 0.4, 10]
+    algs.bubblesort(x)
 
 def test_quicksort():
     p=0
@@ -61,6 +65,11 @@ def test_quicksort():
 
     # Test duplicated elements in array:
     x = [4, 5, 4, 6, 10, 3]
+    r = len(x)-1
+    algs.quicksort(x,p,r)
+    
+    # Test floats in array:
+    x = [0.4, -3, 0.4, 10]
     r = len(x)-1
     algs.quicksort(x,p,r)
     
