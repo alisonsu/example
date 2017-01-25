@@ -3,7 +3,7 @@
 This code plots the time and memory complexity (via number of conditionals and assignments)
 for bubblesort and quicksort. It iterates through list sizes from 100-1000 in steps
 of 100. For each list size, it randomly generates 100 lists in order to calculate means
-and standard deviations for plotting. The data is plotted with and without normalization
+and standard deviations for plotting. The data are plotted with and without normalization
 to the expected complexity.
 """
 import random
@@ -149,14 +149,14 @@ plt.errorbar(trials,bbl_mean,bbl_std)
 plt.title("Time complexity of bubblesort")
 plt.xlabel("Number of values in list")
 plt.ylabel("Runtime (mean and stdev over 100 input lists)")
-plt.savefig('bubble')
+plt.savefig('Bubblesort_time')
 
 plt.figure(1)
 plt.errorbar(trials,qcksrt_mean,qcksrt_std)
 plt.title("Time complexity of quicksort")
 plt.xlabel("Number of values in list")
 plt.ylabel("Runtime (mean and stdev over 100 input lists)")
-plt.savefig('quicksort')
+plt.savefig('Quicksort_time')
 
 plt.figure(2)
 plt.errorbar(trials,bbl_mean,bbl_std)
@@ -165,7 +165,7 @@ plt.title("Comparing time complexities of bubblesort and quicksort")
 plt.legend(['bubblesort','quicksort'],loc='upper left')
 plt.xlabel("Number of values in list")
 plt.ylabel("Runtime (mean and stdev over 100 input lists)")
-plt.savefig('bubble_vs_quicksort')
+plt.savefig('bubble_vs_quicksort_time')
 
 plt.figure(3)
 plt.errorbar(trials,cond_bubble_mean,cond_bubble_std)
@@ -183,7 +183,7 @@ plt.legend(['# of conditionals','# of assignments'],loc='upper left')
 plt.title("Normalized conditionals and assignments in bubblesort")
 plt.xlabel("Number of values in list")
 plt.ylabel("Normalized count (mean and stdev over 100 input lists)")
-plt.savefig('bubble_cond_assign_norm')
+plt.savefig('bubble_cond_assign_normalized')
 
 plt.figure(5)
 plt.errorbar(trials,quicksort_cond_norm_mean,quicksort_cond_norm_std)
@@ -192,7 +192,7 @@ plt.legend(['# of conditionals','# of assignments'],loc='upper left')
 plt.title("Normalized conditionals and assignments in quicksort")
 plt.xlabel("Number of values in list")
 plt.ylabel("Normalized count (mean and stdev over 100 input lists)")
-plt.savefig('quick_cond_assign_norm')
+plt.savefig('quicksort_cond_assign_normalized')
 
 plt.figure(6)
 plt.errorbar(trials,cond_quick_mean,cond_quick_std)
@@ -201,7 +201,7 @@ plt.legend(['# of conditionals','# of assignments'],loc='upper left')
 plt.title("Number of conditionals and assignments in quicksort")
 plt.xlabel("Number of values in list")
 plt.ylabel("Count (mean and stdev over 100 input lists)")
-plt.savefig('quick_cond_assign')
+plt.savefig('quicksort_cond_assign')
 
 
 plt.figure(7)
@@ -209,7 +209,7 @@ plt.errorbar(trials,bbl_norm_mean,bbl_norm_std)
 plt.title("Time complexity of bubblesort normalized to n^2")
 plt.xlabel("Number of values in list")
 plt.ylabel("Runtime (mean and stdev over 100 input lists)")
-plt.savefig('bubble_normalized')
+plt.savefig('bubblesort_normalized')
 
 plt.figure(8)
 plt.errorbar(trials,quicksort_norm_mean,quicksort_norm_std)
