@@ -35,10 +35,6 @@ def test_bubblesort():
     # Test duplicated elements in array:
     x = [4, 5, 4, 6, 10, 3]
     algs.bubblesort(x)
-    
-    # Test characters in list
-    x = ['a', 'g', 2]
-    algs.bubblesort(x)
 
 def test_quicksort():
     p=0
@@ -67,9 +63,4 @@ def test_quicksort():
     x = [4, 5, 4, 6, 10, 3]
     r = len(x)-1
     algs.quicksort(x,p,r)
-    
-    # Test characters in list
-    x = ['a', 'g', 2]
-    r = len(x)-1
-    algs.quicksort(x,p,r) 
     
