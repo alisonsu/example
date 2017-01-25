@@ -78,7 +78,7 @@ def quicksort(lst2, p, r):
     else:
         cond_quick = 0
         assign_quick = 0
-        assign_quick +=1
+        cond_quick +=1
         if (r>p):
             pivot, c_qck, a_qck = partition(lst2,p,r)
             cond_quick += c_qck
